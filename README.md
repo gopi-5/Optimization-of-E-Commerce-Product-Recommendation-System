@@ -9,7 +9,7 @@ This project explores the power of machine learning to enhance the shopping expe
 
 💡This Project Highlights:
 
-Data-Driven Insights - Utilizing extensive datasets to understand user interactions and behavior patterns.
+*Data-Driven Insights - Utilizing extensive datasets to understand user interactions and behavior patterns.
 
 *Multi-Model Approach - Integrating various recommendation models, including collaborative filtering,content-based filtering,hybrid and popularity-based filtering,techniques like matrix factorization,dimensionality reduction using TruncatedSVD,TFIDF vectorizer to ensure diverse and accurate recommendations.
 
