@@ -84,6 +84,7 @@ A sample dataset of product reviews (5,000 entries) from Walmart between July–
 
 ```
 ├── README.md
+├── requirements.txt
 ├── marketing_sample_for_walmart_com…tsv
 ├── miniprojcode.ipynb
 └── [future scripts/modules such as]:
