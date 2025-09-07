@@ -99,7 +99,7 @@ A sample dataset of product reviews (5,000 entries) from Walmart between July–
 
 ## Models & Techniques
 
-* **Collaborative Filtering**: User–item interaction matrix, cosine similarity, SVD(), and NMF().
+* **Collaborative Filtering**: User–item interaction matrix, cosine similarity, SVD(Singular Value Decomposition), and NMF(Non-negative Matrix Factorization).
 * **Matrix Factorization**: Latent factor modeling using SVD-based approaches.
 * **Content-Based Filtering**: TF-IDF + cosine similarity on product attributes.
 * **Popularity-Based Filtering**: Ranking items by mean ratings and number of ratings.
@@ -109,7 +109,7 @@ A sample dataset of product reviews (5,000 entries) from Walmart between July–
 
 ## Evaluation
 
-* Metrics: RMSE(), MAE() (for rating prediction), Precision, Recall, F1.
+* Metrics: RMSE(Root Mean Square Error), Precision, Recall, F1.
 * Test strategies: train/test split, cross-validation.
 * Visualizations: rating distributions, popularity distributions, recommendation comparisons.
 
