@@ -14,7 +14,8 @@
 - [Dataset](#dataset)  
 - [Project Structure](#project-structure)  
 - [Models & Techniques](#models--techniques)  
-- [Evaluation](#evaluation)  
+- [Evaluation](#evaluation)
+- [Results](#results)  
 - [Optimization & Performance](#optimization--performance)  
 - [Contributing](#contributing)  
 - [License](#license)  
@@ -85,6 +86,7 @@ A sample dataset of product reviews (5,000 entries) from Walmart between July–
 ```
 ├── README.md
 ├── requirements.txt
+├── outputs.md
 ├── marketing_sample_for_walmart_com…tsv
 ├── miniprojcode.ipynb
 └── [future scripts/modules such as]:
@@ -97,18 +99,62 @@ A sample dataset of product reviews (5,000 entries) from Walmart between July–
 
 ## Models & Techniques
 
-* **Collaborative Filtering**: User–user and item–item similarity (cosine, Pearson).
+* **Collaborative Filtering**: User–item interaction matrix, cosine similarity, SVD(), and NMF().
 * **Matrix Factorization**: Latent factor modeling using SVD-based approaches.
-* **Content-Based Filtering**: TF-IDF scoring and similarity measures.
-* **Hybrid Methods**: Combination of collaborative and content-based models.
-
+* **Content-Based Filtering**: TF-IDF + cosine similarity on product attributes.
+* **Popularity-Based Filtering**: Ranking items by mean ratings and number of ratings.
+* **Hybrid Methods**: Weighted combination of content and collaborative filtering.
+* **Hybrid + Popularity Filtering**: Merges hybrid results with popularity metrics for best performance.
 ---
 
 ## Evaluation
 
-* Metrics: RMSE, MAE (for rating prediction), Precision\@K, Recall\@K.
+* Metrics: RMSE(), MAE() (for rating prediction), Precision, Recall, F1.
 * Test strategies: train/test split, cross-validation.
-* Visualizations: precision-recall curves, evaluation plots.
+* Visualizations: rating distributions, popularity distributions, recommendation comparisons.
+
+---
+
+## Results
+
+The system was tested across multiple approaches, with the following insights:
+
+1. **Content-Based Filtering**
+
+   * Personalized recommendations based on product features.
+   * High precision when evaluating well-described products.
+
+2. **Collaborative Filtering**
+
+   * Captured strong user–user and item–item similarity patterns.
+   * Effective when sufficient interaction data is available.
+
+3. **Popularity-Based Filtering**
+
+   * Recommended trending products with high ratings and review counts.
+   * Less personalized but solved the cold-start problem.
+
+4. **Hybrid Filtering (Content + Collaborative)**
+
+   * Balanced personalization and community insights.
+   * Higher F1-scores compared to individual models.
+
+5. **Hybrid + Popularity Filtering**
+
+   * Consistently outperformed all methods.
+   * Best recall and overall balance of personalization + trending relevance.
+
+### Visual Outputs (from the report):
+
+* ✅ Missing values handled and distributions plotted.
+* ✅ Content-based recommendations (Fig 3).
+* ✅ Collaborative filtering recommendations (Fig 4).
+* ✅ Popularity metrics and recommendations (Figs 5 & 6).
+* ✅ Hybrid recommendations (Fig 6).
+* ✅ Hybrid + Popularity recommendations (Fig 7).
+
+**Key Finding:**
+The **Hybrid + Popularity model** was the best overall, combining personalization, diversity, and popularity to maximize relevance and scalability.
 
 ---
 
@@ -136,11 +182,7 @@ This project is licensed under the **MIT License**.
 
 ---
 
-## Acknowledgements
 
-* Inspired by real-world recommender system practices.
-* Dataset from \[Walmart Product Reviews].
-* Best practices for project documentation followed.
-
-```
 Dive into the code, explore the data, and contribute to the future of e-commerce with our cutting-edge recommendation system!👩‍💻🪄
+
+
